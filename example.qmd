@@ -1,0 +1,26 @@
+---
+title: "Supplementary Materials — Corruption Audit"
+format: html
+filters: []
+---
+
+# Pre-submission UnCorrupt scan
+
+This document scans the supplementary spreadsheets attached to this paper at render time. Any corruption flags appear inline below.
+
+## Single file
+
+{{< uncorrupt-scan path="data/supp_table_1.xlsx" >}}
+
+## Recursive folder
+
+{{< uncorrupt-scan path="data/supplementary/" recursive=true >}}
+
+## Notes
+
+The shortcode shells out to the `uncorrupt` CLI; install once with
+`pip install uncorrupt` and the scan happens at every `quarto render`.
+
+A clean scan produces a green callout; flags appear in a red
+`callout-important` block with one row per suspicious cell, grouped by
+post-boost confidence band.
